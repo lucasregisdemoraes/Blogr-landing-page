@@ -1,0 +1,170 @@
+/*     font-family: 'Overpass', sans-serif;*/
+/*     font-family: 'Ubuntu', sans-serif; */
+
+
+
+/*      =====   VARIABLE    ===== */
+:root {
+    --lightRed: hsl(356, 100%, 66%);
+    --veryLightRed: hsl(355, 100%, 74%);
+    --veryDarkBlue: hsl(208, 49%, 24%);
+
+    --white: hsl(0, 0%, 100%);
+    --grayishBlue: hsl(240, 2%, 79%);
+    --veryDarkGrayishBlue: hsl(207, 13%, 34%);
+    --veryDarkBlackBlue: hsl(240, 10%, 16%);
+
+    --bgVeryLightRed: hsl(13, 100%, 72%);
+    --bgLightRed: hsl(353, 100%, 62%);
+
+    --bgVeryDarkGrayBlue: hsl(237, 17%, 21%);
+    --bgVeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+}
+
+/*      =====   GENERAL STYLES    ===== */
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*      =====   HEADER    ===== */
+
+header {
+    /* background-image: url(../images/bg-pattern-intro.svg); */
+    background-image: linear-gradient(135deg, var(--bgVeryLightRed) 0%, var(--bgLightRed) 100%); 
+    
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+
+    padding: 0 30px 180px 30px;
+}
+
+header nav {
+    padding: 65px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul ul {
+    display: none;
+}
+
+header li {
+    font-size: 25px;
+    /* color: var(--veryDarkGrayishBlue);\ */
+    color: var(--veryDarkBlue);
+    font-weight: 600;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-top: 70px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header #headerButtons {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+#startButton {
+    color: transparent;
+    background-color: var(--white);
+    /* background-color: transparent; */
+    border: none;
+}
+
+#learnButton {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+/*      =====   MAIN    ===== */
+
+main {
+        font-family: 'Overpass', sans-serif;
+}
+
+main h2 {
+    font-size: 30px;
+    color: var(--veryDarkBlue);
+}
+
+main p {
+    font-size: 19px;
+    color: var(--veryDarkGrayishBlue);
+}
+
+#secondSection {
+    /* background-image: url(../images/bg-pattern-circles.svg); */
+    background-image: linear-gradient(135deg, var(--bgVeryDarkGrayBlue) 0%, var(--bgVeryDarkDesaturatedBlue) 100%);
+}
+
+#secondSection h2 {
+    color: var(--white);
+    font-size: 42px;
+}
+
+#secondSection p {
+    color: var(--grayishBlue);
+}
+
+/*      =====   FOOTER    ===== */
+
+footer {
+    background-color: var(--veryDarkBlackBlue);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+footer h2 {
+    color: var(--white);
+    font-size: 20px;
+}
+
+footer a {
+    color: var(--grayishBlue);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+/*      =====   RESPONSIVENESS    ===== */
+
+
+/*      =====   GENERAL STYLES    ===== */
+
+
+/*      =====   MAIN    ===== */
+
+
+/*      =====   HEADER    ===== */
+
+
+/*      =====   FOOTER    ===== */
+
