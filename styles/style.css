@@ -39,61 +39,110 @@ ul {
 
 header {
     /* background-image: url(../images/bg-pattern-intro.svg); */
-    background-image: linear-gradient(135deg, var(--bgVeryLightRed) 0%, var(--bgLightRed) 100%); 
+    background-image: url(../images/bg-pattern-intro.svg), linear-gradient(135deg, var(--bgVeryLightRed) 0%, var(--bgLightRed) 100%); 
+    background-repeat: no-repeat;
+    background-size: 1300px, 100%;
+    background-position: top -200px left -350px, center;
     
     font-family: 'Overpass', sans-serif;
     color: var(--white);
 
-    padding: 0 30px 180px 30px;
+    padding: 0 30px 160px 30px;
+    border-bottom-left-radius: 100px;
 }
 
 header nav {
-    padding: 65px 0;
+    padding: 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header ul ul {
-    display: none;
+header #menu {
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    margin: 50px 5vw;
+    background-color: var(--white);
+    border-radius: 5px;
+    width: 90vw;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
-header li {
-    font-size: 25px;
+header #menu li {
+    font-size: 19px;
     /* color: var(--veryDarkGrayishBlue);\ */
     color: var(--veryDarkBlue);
     font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+header #menu li:last-child {
+    margin-bottom: 0;
+}
+
+header #menu ul{
+    border-radius: 10px;
+    background-color: hsla(240, 3%, 79%, 0.336);
+    padding: 25px 0;
+
+    display: none;
+}
+header #menu ul li {
+    color: var(--veryDarkGrayishBlue);
+    font-size: 17px;
+}
+
+header #menu div {
+    border-top: 1px solid var(--grayishBlue);
+    padding-top: 30px;
+}
+
+header #menu div li:last-of-type {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    color: var(--white);
+    background-image: linear-gradient(135deg, var(--bgVeryLightRed) 0%, var(--bgLightRed) 100%); 
+    box-sizing: border-box;
+    width: 145px;
+    border-radius: 30px;
+    padding: 13px;
+    margin: auto;
 }
 
 header h1 {
     font-size: 35px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 header p {
     font-size: 20px;
+    margin-top: 30px;
 }
 
 header #headerButtons {
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 40px;
+    /* display: flex; */
+    /* justify-content: space-between; */
 }
 
 header button {
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    width: 150px;
-    height: 60px;
+    width: 140px;
+    height: 50px;
     border-radius: 30px;
 }
 
 #startButton {
-    color: transparent;
+    color: var(--veryLightRed);
     background-color: var(--white);
     /* background-color: transparent; */
     border: none;
+    margin-right: 15px;
 }
 
 #learnButton {
@@ -106,30 +155,73 @@ header button {
 
 main {
         font-family: 'Overpass', sans-serif;
+        padding: 80px 0 0 0;
 }
 
 main h2 {
-    font-size: 30px;
+    font-size: 28px;
     color: var(--veryDarkBlue);
+    margin: 23px 30px 18px 30px;
+    line-height: 28px;
 }
 
 main p {
-    font-size: 19px;
+    font-size: 17px;
     color: var(--veryDarkGrayishBlue);
+    margin: 0 30px 50px 30px;
+    line-height: 28px;
+}
+
+main .image {
+    width: 100vw;
+    height: 335px;
+    overflow: hidden;
+    margin: 47px 0;
+}
+
+main .image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #secondSection {
-    /* background-image: url(../images/bg-pattern-circles.svg); */
-    background-image: linear-gradient(135deg, var(--bgVeryDarkGrayBlue) 0%, var(--bgVeryDarkDesaturatedBlue) 100%);
+    background-image: url(../images/bg-pattern-circles.svg), linear-gradient(135deg, var(--bgVeryDarkGrayBlue) 0%, var(--bgVeryDarkDesaturatedBlue) 100%);
+    background-size: 600px, 100%;
+    background-position: top -240px center, center;
+    background-repeat: no-repeat;
+    margin: 270px 0 60px 0;
+    padding-bottom: 70px;
+    border-radius: 0 100px;
+}
+
+#secondSection .image{
+    transform: translate(0, -190px);
+    height: 175px;
+    overflow: initial;
+}
+
+#secondSection .image img {
+    height: 400px;
+
 }
 
 #secondSection h2 {
     color: var(--white);
     font-size: 42px;
+    line-height: 54px;
 }
 
 #secondSection p {
     color: var(--grayishBlue);
+}
+
+#thirdSection .image {
+    height: 100%;
+}
+
+#thirdSection .image img {
+    height: 365px;
 }
 
 /*      =====   FOOTER    ===== */
@@ -137,16 +229,27 @@ main p {
 footer {
     background-color: var(--veryDarkBlackBlue);
     font-family: 'Ubuntu', sans-serif;
+    margin-top: 95px;
+    border-top-right-radius: 100px;
+    padding: 70px 0 80px 0;
+}
+footer img {
+    margin-bottom: 30px;
 }
 
 footer h2 {
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
+    margin: 55px 0 35px 0;
+}
+
+footer li {
+    margin-top: 12px;
 }
 
 footer a {
     color: var(--grayishBlue);
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 
