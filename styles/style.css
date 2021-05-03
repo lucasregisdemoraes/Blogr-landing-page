@@ -34,6 +34,9 @@ ul {
     margin: 0;
 }
 
+.hidden {
+    /* display: none; */
+}
 
 /*      =====   HEADER    ===== */
 
@@ -58,8 +61,14 @@ header nav {
     align-items: center;
 }
 
+/* header ul li input:checked ~ #menu{
+    background-color: blue;
+
+} */
+
 header #menu {
-    /* display: none; */
+    display: none;
+    /* transition: all 2s; */
     position: absolute;
     left: 0;
     margin: 50px 5vw;
@@ -70,6 +79,22 @@ header #menu {
     box-sizing: border-box;
 }
 
+header #menu label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+header #menu label li::after {
+    content: "( . . )";
+    background-color: lightblue;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/icon-arrow-dark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 header #menu li {
     font-size: 19px;
     /* color: var(--veryDarkGrayishBlue);\ */
@@ -78,17 +103,16 @@ header #menu li {
     margin-bottom: 20px;
 }
 
-
 header #menu li:last-child {
     margin-bottom: 0;
 }
 
 header #menu ul{
+    display: none;
     border-radius: 10px;
     background-color: hsla(240, 3%, 79%, 0.336);
     padding: 25px 0;
-
-    display: none;
+    margin-bottom: 25px;
 }
 header #menu ul li {
     color: var(--veryDarkGrayishBlue);
@@ -111,6 +135,20 @@ header #menu div li:last-of-type {
     padding: 13px;
     margin: auto;
 }
+
+#openMenus:checked ~ #menus #menu{
+    display: block;
+}
+#productMenu:checked ~ #menu #productOptions {
+    display: block;
+}
+#companyMenu:checked ~ #menu #companyOptions {
+    display: block;
+}
+#connectMenu:checked ~ #menu #connectOptions {
+    display: block;
+}
+
 
 header h1 {
     font-size: 35px;

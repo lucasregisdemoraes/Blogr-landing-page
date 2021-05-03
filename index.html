@@ -35,12 +35,24 @@
     <nav>
       <img src="images/logo.svg" alt="logo Blogr">
 
-      <ul>
-        <li><img src="images/icon-hamburger.svg" alt="icone do menu"></li>
+      <input class="hidden" type="checkbox" id="openMenus">
+      <ul id="menus">
+        <li>
+          <label for="openMenus">
+            <img src="images/icon-hamburger.svg" alt="icone do menu">
+          </label>
+        </li>
+
+        <input class="hidden" type="checkbox" id="productMenu">
+        <input class="hidden" type="checkbox" id="companyMenu">
+        <input class="hidden" type="checkbox" id="connectMenu">
 
         <ul id="menu">
-          <li>Product</li>
-          <ul>
+
+          <label for="productMenu">
+            <li>Product</li>
+          </label>
+          <ul id="productOptions">
             <li>Overview</li>
             <li>Pricing</li>
             <li>Marketplace</li>
@@ -48,30 +60,34 @@
             <li>Integrations</li>
           </ul>
 
-          <li>Company</li>
-          <ul>
+          <label for="companyMenu">
+            <li>Company</li>
+          </label>
+          <ul id="companyOptions">
             <li>About</li>
             <li>Team</li>
             <li>Blog</li>
             <li>Careers</li>
           </ul>
 
-          <li>Connect</li>
-          <ul>
+          <label for="connectMenu">
+            <li>Connect</li>
+          </label>
+          <ul id="connectOptions">
             <li>Contact</li>
             <li>Newsletter</li>
             <li>LinkedIn</li>
           </ul>
-          
-            <div>
-              <li>Login</li>
-              <li>Sign Up</li>
-            </div>
+
+          <div>
+            <li>Login</li>
+            <li>Sign Up</li>
+          </div>
 
         </ul>
-          
-        </ul>
-      </nav>
+
+      </ul>
+    </nav>
 
     <div>
       <h1>A modern publishing platform</h1>
