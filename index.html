@@ -35,24 +35,14 @@
     <nav>
       <img src="images/logo.svg" alt="logo Blogr">
 
-      <input class="hidden" type="checkbox" id="openMenus">
-      <ul id="menus">
+      <ul>
         <li>
-          <label for="openMenus">
-            <img src="images/icon-hamburger.svg" alt="icone do menu">
-          </label>
+            <img onclick="openMenu()" id="hamburguerMenu" src="images/icon-hamburger.svg" alt="icone do menu">
         </li>
 
-        <input class="hidden" type="checkbox" id="productMenu">
-        <input class="hidden" type="checkbox" id="companyMenu">
-        <input class="hidden" type="checkbox" id="connectMenu">
-
-        <ul id="menu">
-
-          <label for="productMenu">
-            <li>Product</li>
-          </label>
-          <ul id="productOptions">
+        <ul id="menu" class="menuClosed">
+            <li onclick="openProductMenu()" id="productOption">Product</li>
+          <ul id="productOptions" class="menuClosed">
             <li>Overview</li>
             <li>Pricing</li>
             <li>Marketplace</li>
@@ -60,20 +50,16 @@
             <li>Integrations</li>
           </ul>
 
-          <label for="companyMenu">
             <li>Company</li>
-          </label>
-          <ul id="companyOptions">
+          <ul id="companyOptions" class="menuClosed">
             <li>About</li>
             <li>Team</li>
             <li>Blog</li>
             <li>Careers</li>
           </ul>
 
-          <label for="connectMenu">
             <li>Connect</li>
-          </label>
-          <ul id="connectOptions">
+          <ul id="connectOptions" class="menuClosed">
             <li>Contact</li>
             <li>Newsletter</li>
             <li>LinkedIn</li>
@@ -87,7 +73,6 @@
         </ul>
 
       </ul>
-
 
     </nav>
 
@@ -105,31 +90,37 @@
   <main>
     <section id="firstSection">
 
-      <div>
-        <h1>Designed for the future</h2>
+      <h1>Designed for the future</h2>
+
+        <div id="firstSectionDiv">
+
           <div class="image">
             <picture>
-              <source media="(min-width: 800px)" srcset="./images/illustration-editor-desktop.svg" type="">
+              <source media="(min-width: 800px)" srcset="./images/illustration-editor-desktop.svg">
               <img src="./images/illustration-editor-mobile.svg" alt="Ilustração de um editor">
             </picture>
           </div>
-      </div>
 
-      <div>
-        <h2>Introducing an extensible editor</h2>
-        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-          change the looks of a blog.
-        </p>
-      </div>
+          <div id="firstSectionText">
+            <div>
+              <h2>Introducing an extensible editor</h2>
+              <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+            <div>
+              <h2>Robust content management</h2>
+              <p>Flexible content management enables users to easily move through posts. Increase the usability of your
+                blog
+                by adding customized categories, sections, format, or flow. With this functionality, you’re in full
+                control.
+              </p>
+            </div>
+          </div>
 
-      <div>
-        <h2>Robust content management</h2>
-        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
-          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-        </p>
-      </div>
+        </div>
     </section>
 
     <section id="secondSection">
@@ -137,31 +128,38 @@
         <img src="images/illustration-phones.svg" alt="aplicativo Blogr no celular">
       </div>
 
-      <div id="secondSectionText">  
+      <div id="secondSectionText">
         <h2> State of the Art Infrastructure</h2>
         <p> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
       </div>
     </section>
 
     <section id="thirdSection">
       <div class="image">
-        <img src="images/illustration-laptop-mobile.svg" alt="aplicativo Blogr no notebook">
+        <picture>
+          <source media="(min-width: 800px)" srcset="./images/illustration-laptop-desktop.svg">
+          <img src="./images/illustration-laptop-mobile.svg" alt="aplicativo Blogr no notebook">
+        </picture>
       </div>
 
-      <div>
-        <h2>Free, open, simple</h2>
-        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
-          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-      </div>
-
-      <div>
-        <h2>Powerful tooling</h2>
-        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
-          breeze,
-          but
-          capable of producing even the most complicated sites.</p>
+      <div id="thirdSectionText">
+        <div>
+          <h2>Free, open, simple</h2>
+          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+            tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+        </div>
+        <div>
+          <h2>Powerful tooling</h2>
+          <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
+            a
+            breeze,
+            but
+            capable of producing even the most complicated sites.</p>
+        </div>
       </div>
 
     </section>
@@ -170,40 +168,44 @@
   <footer>
     <img src="images/logo.svg" alt="logo Blogr">
 
-    <div>
-      <h2>Product</h2>
-      <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Marketplace</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Integrations</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h2>Company</h2>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h2>Connect</h2>
-      <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Newsletter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </div>
+<div id="footerNav">
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+  
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+  
+      <div>
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+</div>
   </footer>
+
+  <script src="./scripts/menus.js"></script>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Lucas</a>.
   </div>
 </body>
 
