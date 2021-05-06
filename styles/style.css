@@ -79,6 +79,12 @@ header #menu li {
     margin-bottom: 20px;
 }
 
+header #menu img {
+    transform: translate(0, -2px);
+    margin-left: 2px;
+}
+
+/* 
 header #productOption::after {
     content: "";
     box-sizing: border-box;
@@ -89,7 +95,9 @@ header #productOption::after {
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 8px;
-}
+
+    transform: rotate(180deg);
+} */
 
 header #menu li:last-child {
     margin-bottom: 0;

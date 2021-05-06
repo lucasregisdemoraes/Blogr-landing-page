@@ -37,11 +37,16 @@
 
       <ul>
         <li>
-            <img onclick="openMenu()" id="hamburguerMenu" src="images/icon-hamburger.svg" alt="icone do menu">
+          <img onclick="openMenu()" id="hamburguerMenu" src="images/icon-hamburger.svg" alt="icone do menu">
         </li>
 
         <ul id="menu" class="menuClosed">
-            <li onclick="openProductMenu()" id="productOption">Product</li>
+          <li onclick="openProductMenu()" id="productOption">Product
+            <picture>
+              <source media="(min-width: 800px)" srcset="./images/icon-arrow-light.svg">
+              <img id="productArrow" src="./images/icon-arrow-dark.svg" alt="seta para opções">
+            </picture>
+          </li>
           <ul id="productOptions" class="menuClosed">
             <li>Overview</li>
             <li>Pricing</li>
@@ -50,7 +55,7 @@
             <li>Integrations</li>
           </ul>
 
-            <li>Company</li>
+          <li>Company</li>
           <ul id="companyOptions" class="menuClosed">
             <li>About</li>
             <li>Team</li>
@@ -58,7 +63,7 @@
             <li>Careers</li>
           </ul>
 
-            <li>Connect</li>
+          <li>Connect</li>
           <ul id="connectOptions" class="menuClosed">
             <li>Contact</li>
             <li>Newsletter</li>
@@ -168,7 +173,7 @@
   <footer>
     <img src="images/logo.svg" alt="logo Blogr">
 
-<div id="footerNav">
+    <div id="footerNav">
       <div>
         <h2>Product</h2>
         <ul>
@@ -179,7 +184,7 @@
           <li><a href="#">Integrations</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h2>Company</h2>
         <ul>
@@ -189,7 +194,7 @@
           <li><a href="#">Careers</a></li>
         </ul>
       </div>
-  
+
       <div>
         <h2>Connect</h2>
         <ul>
@@ -198,7 +203,7 @@
           <li><a href="#">LinkedIn</a></li>
         </ul>
       </div>
-</div>
+    </div>
   </footer>
 
   <script src="./scripts/menus.js"></script>

@@ -21,7 +21,10 @@ function openProductMenu() {
     const option = document.getElementById('productOption')
     option.setAttribute('onclick', 'closeProductMenu()')
 
-    console.log(option)
+    const optionAfter = option
+    // optionAfter.style.backgroundColor = "#FFFA00"
+
+    console.log(optionAfter)
 }
 
 function closeProductMenu() {
@@ -31,5 +34,5 @@ function closeProductMenu() {
     const option = document.getElementById('productOption')
     option.setAttribute('onclick', 'openProductMenu()')
 
-    console.log(option)
+    // console.log(option)
 }
