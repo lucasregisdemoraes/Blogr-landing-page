@@ -80,24 +80,11 @@ header #menu li {
 }
 
 header #menu img {
-    transform: translate(0, -2px);
+    transform: rotate(-180deg);
     margin-left: 2px;
+    margin-bottom: 2px;
+    transition: all .3s;
 }
-
-/* 
-header #productOption::after {
-    content: "";
-    box-sizing: border-box;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-image: url(../images/icon-arrow-dark.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-left: 8px;
-
-    transform: rotate(180deg);
-} */
 
 header #menu li:last-child {
     margin-bottom: 0;
@@ -119,7 +106,7 @@ header #menu div {
     padding-top: 30px;
 }
 
-header #menu div li:last-of-type {
+header #menu div li.button {
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
     color: var(--white);
@@ -159,9 +146,8 @@ header button {
 }
 
 #startButton {
-    color: var(--veryLightRed);
+    color: var(--lightRed);
     background-color: var(--white);
-    /* background-color: transparent; */
     border: none;
     margin-right: 15px;
 }
@@ -289,27 +275,122 @@ footer a {
     /*      =====   HEADER    ===== */
     
     header {
-        padding: 0 70px 160px 70px;
-        background-size: 2000px, 100%;
-        background-position: top -750px left -300px, center;
-
+    background-image: url(../images/bg-pattern-intro.svg), linear-gradient(90deg, var(--bgVeryLightRed) 0%, var(--bgLightRed) 100%); 
+    background-size: 2000px, 100%;
+    background-position: top -750px left -300px, center;
+    padding: 0 70px 160px 70px;
     }
-
+    
     header nav {
         padding: 40px 0;
+        justify-content: left;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    header #hamburguerMenu {
+        display: none;
+    }
+    
+    header ul:first-of-type {
+        width: 100%;
+    }
+    
+    header #menu {
+        display: flex;
+        align-items: center;
+        position: static;
+        margin: 0;
+        background-color: transparent;
+        padding: 0;
+        margin-left: 20px;
+        width: initial;
+        position: relative;
+    }
+    
+    header #menu li {
+        margin: 0 15px 0 0;
+        color: var(--white);
+        font-weight: 400;
+        transition: all .1s;
+    }
+    
+    header #menu li:hover {
+        text-decoration: underline var(--white);
+        font-weight: 700;
+    }
+    
+    header #menu ul {
+        background-color: var(--white);
+        position: absolute;        
+        top: 60px;
+        width: initial;
+        padding: 25px;
+        text-align: left;
+        width: 100px;
+        margin: 0;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px .1px;
+    }
+    
+    header #menu ul li {
+        margin: 0 0 10px 0;
+        color: var(--veryDarkBlackBlue);
+        text-decoration: none !important;
+    }
+    header #menu #companyOptions {
+        left: 100px;
+    }
+    header #menu #connectOptions {
+        left: 210px;
     }
 
+    header #menu div {
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        border-top: none;
+        margin-left: auto;
+    }
+    
+    header #menu div li.button {
+        color: var(--lightRed);
+        background-image: none;
+        background-color: var(--white);
+        font-weight: 600;
+    }
+    
+    header #menu div li.button:hover {
+        color: var(--white);
+        background-color: var(--veryLightRed);
+        text-decoration: none;
+        background-image: none;
+    }
+    
     header h1 {
         font-size: 50px;
         margin-bottom: 0;
     }
-
+    
     header p {
         margin-top: 15px;
     }
-
+    
     header button {
         width: 160px;
+    }
+    
+    .button {
+        transition: all .3s;
+    }
+
+    #startButton:hover {
+        color: var(--white);
+        background-color: var(--veryLightRed);
+        background-image: none;
+    }
+
+    #learnButton:hover {
+        color: var(--lightRed);
+        background-color: var(--white);
     }
 
     /*      =====   MAIN    ===== */
@@ -380,14 +461,14 @@ footer a {
     }
 
     #secondSection .image{
-        transform: translate(-50px, -230%);
+        transform: translate(-50px, -210%);
         height: 100px;
         margin: 0;
     }
     
     #secondSection .image img {
         max-width: initial;
-        min-width: 570px;
+        min-width: 450px;
     }
 
     #secondSectionText {
@@ -440,32 +521,44 @@ footer a {
     }
     
     footer img {
-  
         height: 40px;
     }
     
     footer h2 {
         margin-top: 20px;
     }
+
+    footer li {
+        margin-top: 20px;
+    }
+
+    footer a:hover {
+        text-decoration: var(--white) underline;
+    }
 }
-
-
-
-/*      =====   GENERAL STYLES    ===== */
-
-
-
-
-
-
-
-
 
 
 @media(min-width: 1200px) {
     header {
+        background-size: 2500px, 100%;
+        background-position: top -1000px left -300px, center;
         padding-left: 130px;
         padding-right: 130px;
+    }
+
+    header #menu {
+        margin-left: 70px;
+    }
+
+    header #menu li {
+        margin-right: 30px;
+    }
+
+    header #menu #companyOptions {
+        left: 115px;
+    }
+    header #menu #connectOptions {
+        left: 245px;
     }
 
     #firstSection {

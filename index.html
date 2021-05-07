@@ -55,7 +55,12 @@
             <li>Integrations</li>
           </ul>
 
-          <li>Company</li>
+          <li onclick="openCompanyMenu()" id="companyOption">Company
+            <picture>
+              <source media="(min-width: 800px)" srcset="./images/icon-arrow-light.svg">
+              <img id="companyArrow" src="./images/icon-arrow-dark.svg" alt="seta para opções">
+            </picture>
+          </li>
           <ul id="companyOptions" class="menuClosed">
             <li>About</li>
             <li>Team</li>
@@ -63,7 +68,12 @@
             <li>Careers</li>
           </ul>
 
-          <li>Connect</li>
+          <li onclick="openConnectMenu()" id="connectOption">Connect
+            <picture>
+              <source media="(min-width: 800px)" srcset="./images/icon-arrow-light.svg">
+              <img id="connectArrow" src="./images/icon-arrow-dark.svg" alt="seta para opções">
+            </picture>
+          </li>
           <ul id="connectOptions" class="menuClosed">
             <li>Contact</li>
             <li>Newsletter</li>
@@ -72,7 +82,7 @@
 
           <div>
             <li>Login</li>
-            <li>Sign Up</li>
+            <li class="button">Sign Up</li>
           </div>
 
         </ul>
@@ -86,8 +96,8 @@
       <p>Grow your audience and build your online brand</p>
 
       <div id="headerButtons">
-        <button id="startButton">Start for Free</button>
-        <button id="learnButton">Learn More</button>
+        <button class="button" id="startButton">Start for Free</button>
+        <button class="button" id="learnButton">Learn More</button>
       </div>
     </div>
   </header>

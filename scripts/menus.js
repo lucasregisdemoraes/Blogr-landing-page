@@ -1,38 +1,56 @@
 function openMenu() {
-    const menu = document.getElementById('menu')
-    menu.classList.replace('menuClosed', 'menuOpened')
-    const hamburguer = document.getElementById('hamburguerMenu')
-    hamburguer.setAttribute('src', './images/icon-close.svg')
-    hamburguer.setAttribute('onclick', 'closeMenu()')
+    document.getElementById('menu').classList.toggle('menuOpened')
+    document.getElementById('hamburguerMenu').setAttribute('src', './images/icon-close.svg')
+    document.getElementById('hamburguerMenu').setAttribute('onclick', 'closeMenu()')
 }
 
 function closeMenu() {
-    const menu = document.getElementById('menu')
-    menu.classList.replace('menuOpened', 'menuClosed')
-    const hamburguer = document.getElementById('hamburguerMenu')
-    hamburguer.setAttribute('src', './images/icon-hamburger.svg')
-    hamburguer.setAttribute('onclick', 'openMenu()')
+    document.getElementById('menu').classList.replace('menuOpened', 'menuClosed')
+    document.getElementById('hamburguerMenu').setAttribute('src', './images/icon-hamburger.svg')
+    document.getElementById('hamburguerMenu').setAttribute('onclick', 'openMenu()')
 }
 
 function openProductMenu() {
-    const options = document.getElementById('productOptions')
-    options.classList.replace('menuClosed', 'menuOpened')
-
-    const option = document.getElementById('productOption')
-    option.setAttribute('onclick', 'closeProductMenu()')
-
-    const optionAfter = option
-    // optionAfter.style.backgroundColor = "#FFFA00"
-
-    console.log(optionAfter)
+    document.getElementById('productOptions').classList.toggle('menuOpened')
+    document.getElementById('productOption').setAttribute('onclick', 'closeProductMenu()')
+    document.getElementById('productArrow').style.transform = 'rotate(-360deg)'
+    console.log(document.getElementById('productOptions').classList)
 }
 
 function closeProductMenu() {
-    const options = document.getElementById('productOptions')
-    options.classList.replace('menuOpened', 'menuClosed')
+    document.getElementById('productOptions').classList.replace('menuOpened', 'menuClosed')
+    document.getElementById('productOption').setAttribute('onclick', 'openProductMenu()')
+    document.getElementById('productArrow').style.transform = 'rotate(-180deg)'
+}
 
-    const option = document.getElementById('productOption')
-    option.setAttribute('onclick', 'openProductMenu()')
+function openCompanyMenu() {
+    document.getElementById('companyOptions').classList.replace('menuClosed', 'menuOpened')
 
-    // console.log(option)
+    document.getElementById('companyOption').setAttribute('onclick', 'closeCompanyMenu()')
+
+    document.getElementById('companyArrow').style.transform = 'rotate(-360deg)'
+}
+
+function closeCompanyMenu() {
+    document.getElementById('companyOptions').classList.replace('menuOpened', 'menuClosed')
+
+    document.getElementById('companyOption').setAttribute('onclick', 'openCompanyMenu()')
+
+    document.getElementById('companyArrow').style.transform = 'rotate(-180deg)'
+}
+
+function openConnectMenu() {
+    document.getElementById('connectOptions').classList.replace('menuClosed', 'menuOpened')
+
+    document.getElementById('connectOption').setAttribute('onclick', 'closeConnectMenu()')
+
+    document.getElementById('connectArrow').style.transform = 'rotate(-360deg)'
+}
+
+function closeConnectMenu() {
+    document.getElementById('connectOptions').classList.replace('menuOpened', 'menuClosed')
+
+    document.getElementById('connectOption').setAttribute('onclick', 'openConnectMenu()')
+
+    document.getElementById('connectArrow').style.transform = 'rotate(-180deg)'
 }
